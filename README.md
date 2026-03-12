@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Geoffrey Kwadzo Alomatu — Portfolio
+
+Premium, modern portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Replace Placeholder Assets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Profile image: `public/placeholders/profile.svg`
+- Project covers: `public/placeholders/project-ghnews.svg`, `public/placeholders/project-creatorpreneur.svg`, `public/placeholders/project-dzata.svg`
+- Gallery images: `public/placeholders/gallery-1.svg` through `public/placeholders/gallery-6.svg`
 
-## Learn More
+Swap these with your real images (same filenames for zero-code changes).
 
-To learn more about Next.js, take a look at the following resources:
+## Update Downloadable CV
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Replace `public/placeholders/placeholder-cv.pdf` with your real CV file.
+- If you change the filename, update the link in `app/components/Hero.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Edit Project Case Studies
 
-## Deploy on Vercel
+- Structured data lives in `app/data/cv.ts`.
+- Update the `caseStudies` array with real descriptions, tactics, and metrics.
+- Expand the 2025/2026 GhNewsToday strategy blocks when ready.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Update Colors / Theme
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Global theme variables are defined in `app/globals.css` under `:root`.
+- Adjust `--bg`, `--card`, `--text`, `--muted`, and `--accent` to change the palette.
+
+## Content Source of Truth
+
+All real content in this project is sourced directly from the provided CV. Any missing details are clearly labeled as placeholders for easy replacement.
