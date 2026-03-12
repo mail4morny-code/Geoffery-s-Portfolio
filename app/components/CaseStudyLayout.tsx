@@ -44,7 +44,7 @@ export function CaseStudyLayout({ study }: { study: CaseStudy }) {
           <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--muted)]">
             Case Study
           </p>
-          <h1 className="text-[56px] font-semibold leading-[1.05] text-[color:var(--text)] sm:text-[72px] lg:text-[88px]">
+          <h1 className="text-[48px] font-semibold leading-[1.05] text-[color:var(--text)] sm:text-[72px] lg:text-[88px]">
             {study.title}
           </h1>
           <p className="text-lg text-[color:var(--muted)] sm:text-xl">
