@@ -40,9 +40,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative flex h-full w-full"
+          className="relative flex w-full md:h-full"
         >
-          <div className="relative h-full w-full overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-[color:var(--card)] shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-[color:var(--card)] shadow-[0_30px_80px_rgba(0,0,0,0.12)] md:h-full md:aspect-auto">
             <Image
               src="/Hero image.jpeg"
               alt="Geoffrey Kwadzo Alomatu portrait"
