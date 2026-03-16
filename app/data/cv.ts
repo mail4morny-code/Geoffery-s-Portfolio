@@ -9,6 +9,20 @@ export const profile = {
   phones: ["0204485453", "0246304440"],
   email: "Alomatugeoffrey@gmail.com",
   location: "Accra, Ghana",
+  socials: [
+    {
+      label: "Facebook",
+      href: "https://web.facebook.com/alomatu.geoffrey",
+    },
+    {
+      label: "TikTok",
+      href: "https://www.tiktok.com/@ghnewstoday",
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/alomatu-geoffrey-163847171/",
+    },
+  ],
 };
 
 export const stats = [

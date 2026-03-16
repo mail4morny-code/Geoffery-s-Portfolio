@@ -1,4 +1,4 @@
-﻿export type CaseStudy = {
+export type CaseStudy = {
   slug: "ghnewstoday" | "creatorpreneur" | "dzata-foundation";
   title: string;
   overview: string;
@@ -13,6 +13,7 @@
   visualsTitle: string;
   visuals: string[];
   banner: string;
+  gallery: string[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -65,11 +66,17 @@ export const caseStudies: CaseStudy[] = [
     visualsTitle: "Visual Sections to Include:",
     visuals: [
       "Hero/banner placeholder image",
-      "Social media content placeholder gallery",
-      "Analytics/performance placeholder cards",
+      "Social media content gallery",
+      "Analytics/performance cards",
       "Space for future screenshots and campaign visuals",
     ],
     banner: "/projects/ghnewstoday.jpeg",
+    gallery: [
+      "/case-studies/ghnewstoday/gallery-1.jpeg",
+      "/case-studies/ghnewstoday/gallery-2.jpeg",
+      "/case-studies/ghnewstoday/gallery-3.jpeg",
+      "/case-studies/ghnewstoday/gallery-4.jpeg",
+    ],
   },
   {
     slug: "creatorpreneur",
@@ -121,11 +128,17 @@ export const caseStudies: CaseStudy[] = [
     visualsTitle: "Visual Sections to Include:",
     visuals: [
       "Hero/banner placeholder image",
-      "Campaign design placeholder gallery",
-      "Event promotion placeholder cards",
+      "Campaign design gallery",
+      "Event promotion cards",
       "Space for future metrics and screenshots",
     ],
     banner: "/projects/creatorpreneur.jpeg",
+    gallery: [
+      "/case-studies/creatorpreneur/gallery-1.jpeg",
+      "/case-studies/creatorpreneur/gallery-2.jpeg",
+      "/case-studies/creatorpreneur/gallery-3.jpeg",
+      "/case-studies/creatorpreneur/gallery-4.jpeg",
+    ],
   },
   {
     slug: "dzata-foundation",
@@ -171,12 +184,18 @@ export const caseStudies: CaseStudy[] = [
     visualsTitle: "Visual Sections to Include:",
     visuals: [
       "Hero/banner placeholder image",
-      "Video editing work placeholder",
-      "Graphic design work placeholder",
-      "Event coverage placeholder gallery",
+      "Video editing work gallery",
+      "Graphic design work gallery",
+      "Event coverage gallery",
       "Space for future project visuals",
     ],
     banner: "/projects/dzata-foundation.jpeg",
+    gallery: [
+      "/case-studies/dzata-foundation/gallery-1.jpeg",
+      "/case-studies/dzata-foundation/gallery-2.jpeg",
+      "/case-studies/dzata-foundation/gallery-3.jpeg",
+      "/case-studies/dzata-foundation/gallery-4.jpeg",
+    ],
   },
 ];
 

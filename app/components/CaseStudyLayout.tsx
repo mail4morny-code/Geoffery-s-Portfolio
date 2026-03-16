@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 import type { CaseStudy } from "../data/case-studies";
 
 const section: Variants = {
@@ -16,6 +17,23 @@ const section: Variants = {
 };
 
 export function CaseStudyLayout({ study }: { study: CaseStudy }) {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!activeImage) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setActiveImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeImage]);
+
   return (
     <div className="min-h-screen bg-[color:var(--bg)] text-[color:var(--text)]">
       <div className="pointer-events-none fixed bottom-8 right-8 z-50 hidden md:block">
@@ -152,25 +170,44 @@ export function CaseStudyLayout({ study }: { study: CaseStudy }) {
                 ))}
               </ul>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {Array.from({ length: 4 }).map((_, index) => (
-                  <div
+                {study.gallery.map((image, index) => (
+                  <button
+                    type="button"
                     key={`gallery-${study.slug}-${index}`}
-                    className="relative aspect-[4/3] overflow-hidden rounded-[18px] border border-[color:var(--border)] bg-[#e9e7e0]"
+                    className="relative aspect-[4/3] overflow-hidden rounded-[18px] border border-[color:var(--border)] bg-[#e9e7e0] text-left transition hover:-translate-y-0.5"
+                    onClick={() => setActiveImage(image)}
                   >
                     <Image
-                      src="/placeholders/gallery-1.svg"
-                      alt="Placeholder gallery item"
+                      src={image}
+                      alt={`${study.title} gallery item ${index + 1}`}
                       fill
                       className="object-cover"
                     />
-                  </div>
+                  </button>
                 ))}
               </div>
-              {/* Replace the gallery placeholders above with real project visuals. */}
+              {/* Replace the gallery image paths in app/data/case-studies.ts when new visuals are available. */}
             </div>
           </div>
         </motion.section>
       </motion.main>
+      {activeImage ? (
+        <button
+          type="button"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setActiveImage(null)}
+          aria-label="Close full image"
+        >
+          <div className="relative h-full max-h-[90vh] w-full max-w-5xl">
+            <Image
+              src={activeImage}
+              alt={`${study.title} full gallery image`}
+              fill
+              className="object-contain"
+            />
+          </div>
+        </button>
+      ) : null}
     </div>
   );
 }

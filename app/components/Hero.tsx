@@ -13,7 +13,7 @@ export function Hero() {
           <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--muted)]">
             {profile.title}
           </p>
-          <h1 className="text-[72px] font-semibold leading-[1.02] text-[color:var(--text)] sm:text-[84px] lg:text-[96px]">
+          <h1 className="text-[60px] font-semibold leading-[1.02] text-[color:var(--text)] sm:text-[84px] lg:text-[96px]">
             {profile.name}
           </h1>
           <p className="max-w-xl text-xl text-[color:var(--muted)] sm:text-2xl">
