@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 import { profile } from "../data/cv";
@@ -47,7 +48,7 @@ const IconLinkedIn = () => (
   </svg>
 );
 
-const socialIcons: Record<string, () => JSX.Element> = {
+const socialIcons: Record<string, () => ReactElement> = {
   Facebook: IconFacebook,
   TikTok: IconTikTok,
   LinkedIn: IconLinkedIn,
