@@ -44,7 +44,7 @@ export function Hero() {
         >
           <div className="relative h-full w-full overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-[color:var(--card)] shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
             <Image
-              src="/Alomatu.jpeg"
+              src="/Hero image.jpeg"
               alt="Geoffrey Kwadzo Alomatu portrait"
               fill
               className="object-cover"
